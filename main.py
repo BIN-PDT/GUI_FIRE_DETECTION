@@ -73,7 +73,8 @@ class ControlFrame(ctk.CTkFrame):
             title="Select an image or a video file",
             filetypes=[("Image & Video", "*jpg *png *.mp4")],
         )
-        self.path_control.set(path)
+        if path:
+            self.path_control.set(path)
 
 
 class App(ctk.CTk):
